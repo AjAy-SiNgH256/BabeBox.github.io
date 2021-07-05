@@ -714,8 +714,22 @@
     .payment-icon-block ul li {
         margin: 14px;
     }
+    .review-bottom-block-items ul li img {
+        width: 30px;
+        display: block;
+    }
 }
 @media only screen and (max-width:425px){
+    .review-slideshow-items-content {
+        background-color: #fff;
+        position: relative;
+        padding: 35px;
+        margin: 75px 15px 0;
+    }
+    .review-bottom-block-items ul li img {
+        width: 30px;
+        display: block;
+    }
     .offer-main-bg p {
         font-size: 10px;
         font-weight: 600;
@@ -779,6 +793,12 @@
     }
 }
 @media only screen and (max-width:380px){
+    .review-slideshow-items-content {
+        background-color: #fff;
+        position: relative;
+        padding: 35px;
+        margin: 75px 15px 0;
+    }
     .banner-block-items-content > img {
         width: 260px;
     }
@@ -789,8 +809,18 @@
     .second-nav4 img {
         width: 16px;
     }
+    .review-bottom-block-items ul li img {
+        width: 30px;
+        display: block;
+    }
 }
 @media only screen and (max-width:350px){
+    .review-slideshow-items-content {
+        background-color: #fff;
+        position: relative;
+        padding: 35px;
+        margin: 75px 15px 0;
+    }
     .inner-nav1 ul li a>img {
         width: 36px;
         display: block;

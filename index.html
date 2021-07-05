@@ -19,6 +19,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" href="images/Babebox-Logo-04-501-124_687ec3e2-bbd3-4af0-b35a-b788acb0c711.png">
 </head>
 
 <body>
@@ -35,8 +36,8 @@
                     <div class="nav2">
                         <ul>
                             <li><a href="#"><img src="images/magnifying-glass.png" alt="icon">SEARCH</a></li>
-                            <li><a href="#"><img src="images/babe-sm-logo.png" class="logo" alt="logo"></a></li>
-                            <li><a href="#"><img src="images/babebox-lg-light.png" class="logo2" alt="logo"></a></li>
+                            <li class="border-nav"><a href="#"><img src="images/babe-sm-logo.png" class="logo" alt="logo"></a></li>
+                            <li class="border-nav1"><a href="#"><img src="images/babebox-lg-light.png" class="logo2" alt="logo"></a></li>
                             <li><a href="#">ACCOUNT</a></li>
                         </ul>
                     </div>
@@ -133,7 +134,7 @@
         </div>
         <!--Banner Section End-->
         <!--Babebox Components Section Start-->
-        <div class="components-container">
+        <div class="components-container" data-aos="fade-up" id="working">
             <div class="components-main-block">
                 <div class="components-header">
                     <h2>How BabeBox works</h2>
@@ -207,7 +208,7 @@
         </div>
         <!--Brand Names Section End-->
         <!--Babebox Items Section Start-->
-        <div class="babebox-inside-container">
+        <div class="babebox-inside-container" id="inside-box" data-aos="fade-up">
             <div class="babebox-inside-main-block">
                 <div class="babebox-inside-header">
                     <h2>See what’s in your BabeBox</h2>
@@ -256,9 +257,9 @@
         </div>
         <!--Babebox Items Section End-->
         <!--Past Boxes Section Start-->
-        <div class="past-boxes-main-bg">
+        <div class="past-boxes-main-bg" id="past-boxes" data-aos="fade-up">
             <div class="past-boxes-container">
-                <div class="past-boxes-main-block">
+                <div class="past-boxes-main-block" >
                     <img class="bg-big-image" src="images/Hand-with-Box_28a5b86b-0650-4851-93c8-d906a4b4d6e4.png"
                         alt="image">
                     <div class="past-boxes-header">
@@ -312,7 +313,7 @@
     </div>
     <!--Past Boxes Section End-->
     <!--Pricing Section Start-->
-    <div class="pricing-main-bg">
+    <div class="pricing-main-bg" id="plans" data-aos="fade-up">
         <div class="pricing-container">
             <div class="pricing-main-block">
                 <div class="pricing-header">
@@ -442,7 +443,7 @@
     </div>
     <!--Pricing Section End-->
     <!--Trending-Products Section Start-->
-    <div class="trending-main-bg">
+    <div class="trending-main-bg" id="shops" data-aos="fade-up">
         <div class="trending-container">
             <div class="trending-main-block">
                 <div class="trending-upper-main-block">
@@ -651,7 +652,7 @@
     </div>
     <!--Gallery Section End-->
     <!--Review Section Start-->
-    <div class="review-main-bg">
+    <div class="review-main-bg" id="reviews" data-aos="fade-up">
         <div class="review-container">
             <div class="review-main-block">
                 <div class="review-header">
@@ -744,7 +745,7 @@
     </div>
     <!--Review Section End-->
     <!--Location Section Start-->
-    <div class="location-main-bg">
+    <div class="location-main-bg" data-aos="fade-up">
         <div class="location-main-block">
             <div class="location-block-header">
                 <h2>Makeup, the way</h2>
@@ -760,7 +761,7 @@
     </div>
     <!--Location Section End-->
     <!--FAQ Section Start-->
-    <div class="faq-main-bg">
+    <div class="faq-main-bg" id="faq" data-aos="fade-up">
         <div class="faq-container">
             <div class="faq-main-block">
                 <div class="faq-header">
@@ -1038,13 +1039,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(document).ready(function () {
+            AOS.init();
             $('.review-slideshow-main-block').slick({
                 infinite: true,
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 
-                // autoplay: true,
-                // autoplaySpeed: 2000,
+                autoplay: true,
+                autoplaySpeed: 2000,
                 prevArrow: '<button class="facts-button_prev"><img src="images/left-arrow.png"></button>',
                 nextArrow: '<button class="facts-button_next"><img src="images/right-arrow.png"></button>',
                 responsive:[
@@ -1060,7 +1062,13 @@
                         }
                     },
                 ]
-            
+            });
+            $('.second-nav2 ul li a').click(function(event){
+                event.preventDefault();
+                var id = $(this).attr('href');
+                $('html, body').animate({
+				    scrollTop: $(id).offset().top - 120
+				}, 1000);
             });
             $('.dual-section-items:first').addClass('active');
             $('.dual-section-items:first').on('click', function () {
