@@ -76,7 +76,13 @@ li.border-nav1 {
     list-style-type: none;
 }
 .nav3 ul li {
-    margin: 0 8px;
+    padding: 0 8px;
+}
+.inner-nav1 ul > li {
+    border-right: 1px solid #fff;
+}
+.inner-nav2 ul > li {
+    border-right: 1px solid #fff;
 }
 .inner-nav2 ul li a img {
     margin-right: 4px;

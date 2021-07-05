@@ -837,6 +837,18 @@
         display: block;
     }
 }
+@media only screen and (max-width:362px){
+    .dual-section-items p {
+        font-size: 13px;
+    }
+    .past-boxes-mid-block {
+        padding: 24px 0;
+    }
+    .past-boxes-header h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+}
 @media only screen and (max-width:350px){
     .review-slideshow-items-content {
         background-color: #fff;
@@ -880,6 +892,10 @@
     .components-header h2, .babebox-inside-header h2, .pricing-header h2, .trending-upper-header h2, .gallery-header h2, .review-header h2, .location-main-block h2, .faq-header h2 {
         font-size: 20px;
     }
+    .past-boxes-header h2 {
+        text-align: center;
+        font-size: 20px;
+    }
     .payment-icon-block ul li img {
         width: 28px;
     }
@@ -912,12 +928,11 @@
     .past-boxes-container, .pricing-container {
         width: 85%;
     }
-    .past-boxes-header h2 {
-        text-align: center;
-        font-size: 25px;
-    }
     .past-boxes-main-block {
         padding: 70px 0 40px;
+    }
+    .past-boxes-mid-block {
+        padding: 24px 0;
     }
     .banner-block-items-content > img {
         width: 240px;
