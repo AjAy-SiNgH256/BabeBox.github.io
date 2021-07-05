@@ -596,6 +596,11 @@
         width: 50%;
     }
 }
+@media only screen and (max-width:500px){
+    .components-header h2, .babebox-inside-header h2, .pricing-header h2, .trending-upper-header h2, .gallery-header h2, .review-header h2, .location-main-block h2, .faq-header h2 {
+        font-size: 28px;
+    }
+}
 @media only screen and (max-width:485px){
     .second-nav1 img {
         width: 140px;
@@ -790,6 +795,24 @@
     }
     .social-icon-block ul {
         justify-content: flex-start;
+    }
+}
+@media only screen and (max-width:400px){
+    .babebox-inside-header h2:after{
+        width: 105%;
+    }
+    .babebox-inside-header h2 {
+        font-size: 21px;
+    }
+    .past-boxes-header h2 {
+        text-align: center;
+        font-size: 22px;
+    }
+    .components-header h2, .babebox-inside-header h2, .pricing-header h2, .trending-upper-header h2, .gallery-header h2, .review-header h2, .location-main-block h2, .faq-header h2 {
+        font-size: 21px;
+    }
+    .faq-header h2:after {
+        width: 105%;
     }
 }
 @media only screen and (max-width:380px){
