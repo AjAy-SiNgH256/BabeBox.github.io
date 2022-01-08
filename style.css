@@ -824,10 +824,16 @@ span.para-span1,span.para-span2 {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.whats-hot-now{
+.dual-section-items-active{
+    background: #000;
+    color: #fff;
+}
+.trending-active{
+    display: block !important;
+}
+.trending-lower-main-bg{
     display: none;
 }
-
 .gallery-main-bg {
     padding-top: 30px;
 }

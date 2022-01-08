@@ -492,14 +492,15 @@
                 <div class="trending-lower-main-block">
                     <div class="trending-lower-header">
                         <div class="dual-section-box">
-                            <div class="dual-section-items">
+                            <div class="dual-section-items dual-section-items-active" data-id="babebox_favourites">
                                 <p>BabeBox favorites!</p>
                             </div>
-                            <div class="dual-section-items dual-white-box">
-                                <p>What’s hot now</p>
+                            <div class="dual-section-items dual-white-box" data-id="whatshot_now">
+                                <p>What's hot now</p>
                             </div>
                         </div>
                     </div>
+                    <div class="trending-lower-main-bg trending-active" data-id="babebox_favourites">
                     <div class="trending-lower-main-box babebox-favourties">
                         <div class="trending-lower-block-items">
                             <div class="trending-lower-block-items-content">
@@ -573,9 +574,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-
-                    <div class="trending-lower-main-box whats-hot-now">
+                <div class="trending-lower-main-bg" data-id="whatshot_now">
+                    <div class="trending-lower-main-box">
                         <div class="trending-lower-block-items">
                             <div class="trending-lower-block-items-content">
                                 <img src="images/imageedit_8_8241032832_medium.png" alt="image">
@@ -591,6 +593,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -1037,59 +1040,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $(document).ready(function () {
-            AOS.init();
-            $('.review-slideshow-main-block').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                
-                autoplay: true,
-                autoplaySpeed: 2000,
-                prevArrow: '<button class="facts-button_prev"><img src="images/left-arrow.png"></button>',
-                nextArrow: '<button class="facts-button_next"><img src="images/right-arrow.png"></button>',
-                responsive:[
-                    {
-                        breakpoint : 768,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll:1,
-                            prevArrow: '<button class="facts-button_prev"><img src=""></button>',
-                            nextArrow: '<button class="facts-button_next"><img src=""></button>',
-                            autoplay:true,
-                            autoplaySpeed : 1000,
-                        }
-                    },
-                ]
-            });
-            $('.second-nav2 ul li a').click(function(event){
-                event.preventDefault();
-                var id = $(this).attr('href');
-                $('html, body').animate({
-				    scrollTop: $(id).offset().top - 120
-				}, 1000);
-            });
-            $('.dual-section-items:first').addClass('active');
-            $('.dual-section-items:first').on('click', function () {
-                $('.babebox-favourties').fadeIn(0);
-                $('.dual-white-box').removeClass('active');
-                $('.whats-hot-now').fadeOut(0);
-            });
-            $('.dual-section-items').on('click', function () {
-                $(this).addClass('active');
-            });
-            $('.dual-white-box').on('click', function () {
-                $('.whats-hot-now').fadeIn(0);
-                $('.babebox-favourties').fadeOut(0);
-                $('.dual-section-items:first').removeClass('active');
-            });
-            $('.faq-block-items-content ul li').on('click', function () {
-                // $('.faq-onclick-block').slideUp();
-                $(this).parent().parent().find('.faq-onclick-block').slideToggle(300);
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
